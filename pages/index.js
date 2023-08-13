@@ -1,20 +1,6 @@
 import React, { useState, useEffect,useRouter } from 'react';
 import './style.css'
 
-const App = () => {
-  const router = useRouter();
-
-  if (!router.isLoggedIn) {
-    router.push("/login");
-  }
-
-  return (
-    <div>
-      <h1>Ana Sayfa</h1>
-    </div>
-  );
-};
-
 export default function Home(){
   const url = 'https://dog.ceo/api/breeds/image/random';
   const [dog, setDog] = useState();
